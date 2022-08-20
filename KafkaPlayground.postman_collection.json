@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "1e72f74c-4f83-4f36-b927-1fbc8c9798de",
+		"name": "KafkaPlayground",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16283617"
+	},
+	"item": [
+		{
+			"name": "Get All Characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/characters",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create SuperHero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kafka Hero\",\r\n    \"power\": \"Produce Value to Topic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/addSuperHero",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"addSuperHero"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create SuperVillain",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kafka Villain\",\r\n    \"power\": \"Produce Villain Value to Topic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/addSuperVillain",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"addSuperVillain"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
