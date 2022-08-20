@@ -10,6 +10,11 @@ To run as executable via maven from the specific module:
     mvn clean spring-boot:run
 
 Key objects:
+- KafkaPlayground.postman_collection.json - Postman collection with REST requests
+- docker/kafka_playground/docker-compose.yml - Use it to run Kafka:
+  - zookeeper - Kafka configuration storage
+  - broker - Kafka itself
+  - kafdrop - Web UI for displaying Kafka Broker content 
 
 **CharactersGenerator module**
 - config.AppConfig.java - Spring configuration. DB initialization with data is located there.
