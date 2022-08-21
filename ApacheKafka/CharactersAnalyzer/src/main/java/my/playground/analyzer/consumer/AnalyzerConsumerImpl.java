@@ -27,7 +27,7 @@ public class AnalyzerConsumerImpl implements AnalyzerConsumer {
     private static final Logger log = LoggerFactory.getLogger(AnalyzerConsumerImpl.class);
     private static final String TOPIC = "characters";
     private static final String GROUP_ID_CONFIG_NAME = "charactersAnalyzerConsumer";
-    private KafkaConsumer<Long, String> consumer;
+    private final KafkaConsumer<Long, String> consumer;
 
     @Autowired
     private CharactersAnalyzerService charactersAnalyzer;

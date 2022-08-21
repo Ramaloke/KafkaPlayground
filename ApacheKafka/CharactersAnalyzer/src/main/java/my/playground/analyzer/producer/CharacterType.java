@@ -7,7 +7,7 @@ public enum CharacterType {
     SUPERHERO("SuperHero"),
     SUPERVILLAIN("SuperVillain");
 
-    private String value;
+    private final String value;
 
     CharacterType(String value) {
         this.value = value;

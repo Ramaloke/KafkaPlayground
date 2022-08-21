@@ -33,7 +33,7 @@ public class CharactersConsumerImpl implements CharactersConsumer {
     private static final String TOPIC = "analyzer";
     private static final String GROUP_ID_CONFIG_NAME = "charactersConsumer";
 
-    private KafkaConsumer<Long, String> consumer;
+    private final KafkaConsumer<Long, String> consumer;
 
     @Autowired
     private Faker fakeData;
