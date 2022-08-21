@@ -1,0 +1,28 @@
+#General app properties
+server:
+  port: 8081
+
+#General Kafka properties
+auto:
+  create:
+    topics:
+      enable: true
+
+#Spring Kafka properties
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: group_id
+      auto-offset-reset: earliest
+
+topic:
+  name:
+    producer: spring-kafka-topic
+    consumer: spring-kafka-topic
