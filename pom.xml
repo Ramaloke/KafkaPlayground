@@ -6,6 +6,7 @@
     <modules>
         <module>ApacheKafka/CharactersGenerator</module>
         <module>ApacheKafka/CharactersAnalyzer</module>
+        <module>SpringKafka/SpringKafkaDemo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

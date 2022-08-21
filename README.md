@@ -16,7 +16,7 @@ Key objects:
   - broker - Kafka itself
   - kafdrop - Web UI for displaying Kafka Broker content 
 
-**CharactersGenerator module**
+**ApacheKafka/CharactersGenerator module**
 - config.AppConfig.java - Spring configuration. DB initialization with data is located there.
 
 
@@ -34,9 +34,15 @@ Key objects:
 - consumer.CharactersConsumerImpl.java - Common Apache Kafka consumer that fetches and processes data from 'analyzer' Kafka Topic
 - producer.CharactersProducerImpl.java - Common Apache Kafka producer that sends events to 'characters' Kafka Topic
 
-**CharactersAnalyzer module**
+**ApacheKafka/CharactersAnalyzer module**
 - config.AppConfig.java - Spring configuration
 
 - consumer.AnalyzerConsumerImpl.java - Common Apache Kafka consumer that fetches data from 'characters' Kafka Topic and sends data to CharactersAnalyzer service.
 - producer.AnalyzerProducerImpl.java - Common Apache Kafka producer that sends events to 'analyzer' Kafka Topic
 - service.CharactersAnalyzerServiceImpl.java - Service that analyzes data retrieved from AnalyzerConsumer
+
+**SpringKafka/SpringKafkaDemo module**
+- resources/application.yaml - Spring Kafka properties
+- consumer.SpringKafkaConsumer.java - Spring Kafka consumer example. 
+- producer.SpringKafkaProducer.java - Spring Kafka producer example.
+- controller.SpringKafkaController.java - Simple REST Controller with endpoint that sends a message which in its turn is produced to the Kafka Topic by SpringKafkaProducer and then consumed by SpringKafkaConsumer
