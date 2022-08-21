@@ -74,6 +74,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Spring Kafka - Send Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Test message for Spring Kafka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/spring_kafka/sendMessage",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"spring_kafka",
+						"sendMessage"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
